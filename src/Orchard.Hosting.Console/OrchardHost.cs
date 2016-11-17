@@ -88,7 +88,7 @@ namespace Orchard.Hosting
 
         public async Task<CommandReturnCodes> ExecuteInteractiveAsync(CommandHostContext context)
         {
-            await _output.WriteLineAsync("Type \"?\" for help, \"exit\" to exit, \"cls\" to clear screen");
+            // REMOVE THIS LINE await _output.WriteLineAsync("Type \"?\" for help, \"exit\" to exit, \"cls\" to clear screen");
             while (true)
             {
                 var command = await ReadCommandAsync(context);
@@ -115,8 +115,8 @@ namespace Orchard.Hosting
 
         private async Task<string> ReadCommandAsync(CommandHostContext context)
         {
-            //await _output.WriteLineAsync();
-            //await _output.WriteAsync("orchard> ");
+            // REMOVE THIS LINE  await _output.WriteLineAsync();                 
+            // REMOVE THIS LINE  await _output.WriteAsync("orchard> ");
             return await _input.ReadLineAsync();
         }
 
